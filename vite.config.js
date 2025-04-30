@@ -17,5 +17,8 @@ export default ({ mode }) => {
   return defineConfig({
     base: env.VITE_BASEPATH,
     plugins: [react()],
+    server: {
+      port: parseInt(env.PORT) || 5173  // Vite espera el puerto aquí
+    }
   });
 };
