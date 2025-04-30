@@ -19,7 +19,6 @@ export default ({ mode }) => {
     plugins: [react()],
     server: {
       port: parseInt(env.PORT) || 5173  // Vite espera el puerto aquí
-      console.logparseInt(env.PORT)
     }
   });
 };
