@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./App.css";
+import "./app.css";
 import rocketIcon from "./assets/rocket.svg";
 import databaseIcon from "./assets/database-fill.svg";
 import paintIcon from "./assets/palette-fill.svg";
@@ -40,7 +40,7 @@ const router = createBrowserRouter(
   ],
   // Base path where the app is hosted
   {
-    basename: "/fireploy",
+    basename: import.meta.env.VITE_BASEPATH,
   }
 );
 
