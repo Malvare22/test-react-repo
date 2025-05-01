@@ -21,6 +21,8 @@ export default ({ mode }) => {
     plugins: [react()],
     server: {
       port: parseInt(env.PORT) || 10010,
+      host: '0.0.0.0',
+      allowedHosts: ['proyectos.fireploy.online'],
     },
     preview: {
       port: parseInt(env.PORT) || 10010,
