@@ -13,17 +13,19 @@ import react from "@vitejs/plugin-react";
  */
 export default ({ mode }) => {
   const env = loadEnv(mode, process.cwd());
-  
+  console.log('VITE_BASEPATH:', env.VITE_BASEPATH);  // Verifica la carga
+  console.log('PORT:', env.PORT);  // Verifica la carga
+
   return defineConfig({
     base: env.VITE_BASEPATH,
     plugins: [react()],
     server: {
-      port: parseInt(env.PORT) || 10010  // Vite espera el puerto aquí
+      port: parseInt(env.PORT) || 10010,
     },
     preview: {
       port: parseInt(env.PORT) || 10010,
       host: true,  // permite 0.0.0.0
       allowedHosts: ['proyectos.fireploy.online'],
-    }
+    },
   });
 };
