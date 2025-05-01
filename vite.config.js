@@ -18,10 +18,10 @@ export default ({ mode }) => {
     base: env.VITE_BASEPATH,
     plugins: [react()],
     server: {
-      port: parseInt(env.PORT) || 5173  // Vite espera el puerto aquí
+      port: parseInt(env.PORT) || 10010  // Vite espera el puerto aquí
     },
     preview: {
-      port: parseInt(env.PORT) || 4173,
+      port: parseInt(env.PORT) || 10010,
       host: true,  // permite 0.0.0.0
       allowedHosts: ['proyectos.fireploy.online'],
     }
