@@ -20,7 +20,7 @@ export default ({ mode }) => {
     base: env.VITE_BASEPATH,
     plugins: [react()],
     server: {
-      port: parseInt(env.PORT) || 10010,
+      port: parseInt(env.PORT),
       host: '0.0.0.0',
       allowedHosts: ['proyectos.fireploy.online'],
     },
