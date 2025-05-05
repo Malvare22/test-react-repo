@@ -25,7 +25,7 @@ export default ({ mode }) => {
       allowedHosts: ['proyectos.fireploy.online'],
     },
     preview: {
-      port: parseInt(env.PORT) || 10010,
+      port: parseInt(env.PORT),
       host: true,  // permite 0.0.0.0
       allowedHosts: ['proyectos.fireploy.online'],
     },
