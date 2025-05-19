@@ -17,15 +17,15 @@ export default ({ mode }) => {
   console.log('PORT:', env.PORT);  // Verifica la carga
 
   return defineConfig({
-    base: env.VITE_BASEPATH,
+    base: env.VITE_BASE_PATH,
     plugins: [react()],
     server: {
-      port: parseInt(env.PORT),
+      port: parseInt(env.VITE_PORT),
       host: '0.0.0.0',
       allowedHosts: ['proyectos.fireploy.online'],
     },
     preview: {
-      port: parseInt(env.PORT),
+      port: parseInt(env.VITE_PORT),
       host: true,  // permite 0.0.0.0
       allowedHosts: ['proyectos.fireploy.online'],
     },
