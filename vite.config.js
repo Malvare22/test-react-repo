@@ -13,8 +13,8 @@ import react from "@vitejs/plugin-react";
  */
 export default ({ mode }) => {
   const env = loadEnv(mode, process.cwd());
-  console.log('VITE_BASEPATH:', env.VITE_BASEPATH);  // Verifica la carga
-  console.log('PORT:', env.PORT);  // Verifica la carga
+  console.log('VITE_BASE_PATH:', env.VITE_BASE_PATH);  // Verifica la carga
+  console.log('VITE_PORT:', env.VITE_PORT);  // Verifica la carga
 
   return defineConfig({
     base: env.VITE_BASE_PATH,
