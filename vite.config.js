@@ -17,7 +17,7 @@ export default ({ mode }) => {
   console.log('VITE_PORT:', env.VITE_PORT);  // Verifica la carga
 
   return defineConfig({
-    base: env.VITE_BASE_PATH,
+    base: `${env.VITE_BASE_PATH}/`,
     plugins: [react()],
     server: {
       port: parseInt(env.VITE_PORT),
