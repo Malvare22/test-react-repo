@@ -40,7 +40,7 @@ const router = createBrowserRouter(
   ],
   // Base path where the app is hosted
   {
-    basename: import.meta.env.VITE_BASEPATH,
+    basename: import.meta.env.VITE_BASE_PATH,
   }
 );
 
