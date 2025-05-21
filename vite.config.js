@@ -21,11 +21,13 @@ export default ({ mode })  => {
     plugins: [react()],
     server: {
       port: parseInt(env.VITE_PORT),
-      host: true
+      host: true,
+      cors: true,
     },
     preview: {
       port: parseInt(env.VITE_PORT),
       host: true,  // permite 0.0.0.0
+      cors: true,
     },
   });
 };
