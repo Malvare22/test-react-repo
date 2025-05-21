@@ -1,6 +1,6 @@
-import { defineConfig, loadEnv } from 'vite';
+import { ConfigEnv, defineConfig, loadEnv, UserConfigExport } from 'vite';
 import react from "@vitejs/plugin-react";
-import type { ConfigEnv } from 'vite';
+
 /**
  * Vite Configuration File
  *
@@ -11,23 +11,22 @@ import type { ConfigEnv } from 'vite';
  * The `base` option ensures that all static assets and routes are correctly resolved.
  * It must match the subdirectory you're hosting the app under.
  */
-export default ({ mode }: ConfigEnv) => {
+export default ({ mode }: ConfigEnv): UserConfigExport  => {
   const env = loadEnv(mode, process.cwd());
-  console.log('VITE_BASE_PATH:', env.VITE_BASE_PATH);  // Verifica la carga
-  console.log('VITE_PORT:', env.VITE_PORT);  // Verifica la carga
+  //console.log('VITE_BASE_PATH:', env.VITE_BASE_PATH);  // Verifica la carga
+  //console.log('VITE_PORT:', env.VITE_PORT);  // Verifica la carga
 
   return defineConfig({
     base: `${env.VITE_BASE_PATH}`,
     plugins: [react()],
     server: {
       port: parseInt(env.VITE_PORT),
-      host: '0.0.0.0',
-      allowedHosts: ['proyectos.fireploy.online'],
+      host: true
     },
     preview: {
       port: parseInt(env.VITE_PORT),
       host: true,  // permite 0.0.0.0
-      allowedHosts: ['proyectos.fireploy.online'],
     },
   });
 };
+
