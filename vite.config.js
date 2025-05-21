@@ -28,6 +28,7 @@ export default ({ mode })  => {
       port: parseInt(env.VITE_PORT),
       host: true,  // permite 0.0.0.0
       cors: true,
+      allowedHosts:['proyectos.fireplou.online']
     },
   });
 };
