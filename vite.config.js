@@ -23,12 +23,13 @@ export default ({ mode })  => {
       port: parseInt(env.VITE_PORT),
       host: true,
       cors: true,
+      allowedHosts: ['proyectos.fireploy.online'],
     },
     preview: {
       port: parseInt(env.VITE_PORT),
       host: true,  // permite 0.0.0.0
       cors: true,
-      allowedHosts:['proyectos.fireplou.online']
+      allowedHosts: ['proyectos.fireploy.online'],
     },
   });
 };
